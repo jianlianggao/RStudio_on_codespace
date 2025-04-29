@@ -3,7 +3,7 @@
     "features": {
         "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {}
     },
-    "postCreateCommand": "R -e 'install.packages(c(\"dplyr\", \"data.table\", \"PerformanceAnalytics\", \"dtplyr\"), repos=\"https://cloud.r-project.org/\")'",
+    "postCreateCommand": "R -e 'install.packages(c(\"dplyr\", \"data.table\", \"PerformanceAnalytics\", \"dtplyr\"), repos=\"https://cloud.r-project.org/\")' && R -e 'tinytex::install_tinytex()'",
     "postAttachCommand": {
         "rstudio-start": "rserver"
     },
